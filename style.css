@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 12px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap; /*перенос строки */
+  justify-content: space-between; /*прижимает содержимое к краям */
+  align-items: center; /*выравнивает элементы по центру на вертикальной */
+  border-style: solid;
+  border-width: 2px;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-left-style: none;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header .menu ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.header .menu ul li {
+  margin: 20px 10px;
+}
+
+.header .menu ul a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: #f1bc29;
+}
+.header .menu ul a:hover { color: #f06408 }
+
+
+.header .menu2 ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.header .menu2 ul li {
+  margin: 20px 10px;
+}
+
+.header .menu2 ul a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: #f1bc29;
+}
+.header .menu2 ul a:hover { color: #f06408 }
+
+
+
+.logo {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.icon {
+  font-size: 110%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.wrapper {
+  padding-top: 80px;
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  grid-auto-rows: minmax(150px,auto);
+  justify-items: stretch;
+  align-items: stretch;
+}
+.included {
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(80px,auto);
+}
+
+.included > div{
+  padding: 1em;
+  background-color:rgb(240, 158, 58);
+  border-radius: 5px;
+}
+
+.wrapper > div{
+  padding: 1em;
+  background-color:bisque;
+  border-radius: 5px;
+}
+
+.wrapper > div.light{
+  padding: 1em;
+  background-color:rgb(255, 196, 124);
+}
+.box1{
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.box2{
+  grid-column: 3;
+  grid-row: 1/3;
+}
+.box3{
+}
+.box4{
+  grid-column: 2/4;
+}
+.box5{
+};
+.box6{
+}
+.box7{
+}
+
+@media screen and (max-width: 500px) {
+  .header  {
+    flex-direction: column;
+  }
+  .header .menu ul {
+    flex-direction: column;
+    align-self: center;
+  }
+  .header .menu ul li {
+    margin: 5px;
+    align-self: center;
+  }
+}
