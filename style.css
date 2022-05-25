@@ -140,4 +140,7 @@ body {
     margin: 5px;
     align-self: center;
   }
+  .wrapper{
+    margin-top:120px;
+  }
 }
