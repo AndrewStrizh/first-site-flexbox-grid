@@ -89,13 +89,24 @@ body {
   display:grid;
   grid-template-columns: repeat(2,1fr);
   grid-gap: 1em;
-  grid-auto-rows: minmax(80px,auto);
+  grid-auto-rows: minmax(60px,auto);
 }
 
 .included > div{
   padding: 1em;
   background-color:rgb(240, 158, 58);
   border-radius: 5px;
+}
+.included_new {
+  display:grid;
+  grid-gap: 1em;
+}
+
+.included_new > div {
+  padding: 1em;
+  background-color:rgb(240, 158, 58);
+  border-radius: 5px;
+  margin: 5px;
 }
 
 .wrapper > div{
@@ -128,7 +139,7 @@ body {
 .box7{
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
   .header  {
     flex-direction: column;
   }
@@ -141,6 +152,18 @@ body {
     align-self: center;
   }
   .wrapper{
-    margin-top:120px;
+    margin-top:180px;
+  }
+}
+
+.image-radius {
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 500px) and (max-width: 540px) {
+  .wrapper{
+    margin-top:60px;
   }
 }
